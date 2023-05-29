@@ -71,19 +71,9 @@ app.layout = html.Div(children=[
         # "height": "3%"
     },),], href='https://nusci.csl.sri.com/'),
 
-    html.A([
-    html.Img(src='./assets/sri-logo-short-color.png', style={
-        'display': 'inline-block',
-        'position': 'absolute',
-        'height': '50px',
-        'top':'15px',
-        'right':'10px'
-        # "height": "3%"
-    },),], href = 'https://www.sri.com/'),
-
     html.Center([
 
-    html.Div(children='We present AircraftVerse, a publicly available unmanned air vehicle (UAV) design dataset. UAV design encompasses different physics domains and, hence, multiple modalities of representation.  The evaluation of these designs requires the use of scientific analytical and simulation models ranging from computer-aided design tools for structural and manufacturing analysis, computational fluid dynamics tools for drag and lift computation, battery models for energy estimation, and simulation models for flight control and dynamics.',
+    html.Div(children='We present AircraftVerse, a publicly available dataset with over 28,000 diverse set of air vehicle designs.',
     style={
         'textAlign': 'center',
         'color': colors['text'],
@@ -135,15 +125,25 @@ app.layout = html.Div(children=[
 
     html.Div(
     # style={"width": "100%", "height": "400px"},
-    children=['Use the mouse to manipulate the UAV designs in the figures above.'],
+    children=['Use the mouse to manipulate the UAV designs (STL Files) in the figures above.'],
     style={
         # 'display': 'inline-block',
         'vertical-align': 'top',
         'width': '80%',
+        "font-weight": "bold",
         # "height": "200px",
         'padding': '8px 0px'
     },
     ),
+
+
+    html.Div(children='Aircraft design encompasses different physics domains and, hence, multiple modalities of representation. The evaluation of these designs requires the use of scientific analytical and simulation models ranging from computer-aided design tools for structural and manufacturing analysis, computational fluid dynamics tools for drag and lift computation, battery models for energy estimation, and simulation models for flight control and dynamics. AircraftVerse contains over 28,000 diverse set of air vehicle designs - the largest corpus of designs with this level of complexity.  Each design comprises the following artifacts: a symbolic design tree describing topology, propulsion subsystem, battery subsystem, and other design details; a STandard for the Exchange of Product (STEP) model data; a 3D CAD design using Standard Tessellation Languages (STL);  a 3D point cloud for the shape of the design; and evaluation results from high fidelity state-of-the-art physics models that characterize performance metrics such as maximum flight distance and hover-time.  We also present baseline surrogate models that use different modalities of design representation to predict design performance metrics, which we provide as part of our dataset release.',
+    style={
+        'textAlign': 'justify',
+        'color': colors['text'],
+        'width': '80%',
+        'padding': '32px 32px'
+    }),
 
     html.A([html.Button('Dataset', id='btn-nclicks-1', n_clicks=0, className = "button button2"),], href = 'https://www.sri.com/'),
     html.A([html.Button('Paper', id='btn-nclicks-2', n_clicks=0, className = "button button2"),], href = 'https://www.sri.com/'),
@@ -160,7 +160,7 @@ representing the official views or policies of the Department
 of Defense or the U.S. Government.
 This dataset was developed as a collaboration between 
 researchers at SRI International, 
-SwRI, Vanderbilt and CMU.''', style = {'textAlign': 'center',
+SwRI, Vanderbilt University, CMU and Purdue University''', style = {'textAlign': 'center',
 'color': colors['text'], 'width': '80%'} )
 
     ]),
