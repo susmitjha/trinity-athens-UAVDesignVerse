@@ -44,6 +44,7 @@ des_1096 = read_stl(stl_file_1096)
 # Themes: https://dash-bootstrap-components.opensource.faculty.ai/docs/themes/
 app = Dash(__name__, title='UAV Designverse', external_stylesheets=[dbc.themes.DARKLY])
 # DARKLY colors: https://github.com/thomaspark/bootswatch/blob/c143eda36a068054ebad9b4c80314c40f13c9c10/docs/5/darkly/_variables.scss
+server = app.server
 
 colors = {
     'background': '#222',
